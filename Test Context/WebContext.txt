@@ -1,0 +1,80 @@
+# Playwright Web Automation Context
+
+You are assisting with a Playwright automation project using JavaScript.
+
+## Automation Rules
+
+- Use Playwright Test.
+- Prefer `getByRole()`, `getByLabel()`, `getByText()`, and `getByTestId()` locators.
+- Avoid XPath unless no stable alternative exists.
+- Do not use hard waits such as `page.waitForTimeout()` unless specifically required.
+- Use Playwright's auto-waiting and assertions.
+- Keep test cases independent.
+- Use Page Object Model for reusable page interactions.
+- Keep test data separate from test logic.
+- Use fixtures for common setup and reusable test dependencies.
+- Use `async/await` consistently.
+- Add meaningful assertions using `expect()`.
+
+## Project Structure
+
+tests/
+  - UI test cases
+
+pages/
+  - Page Object classes
+
+fixtures/
+  - Custom Playwright fixtures
+
+utils/
+  - Reusable utility functions
+
+test-data/
+  - Test data
+
+playwright.config.ts
+  - Playwright configuration
+
+## Coding Style
+
+- Use clear and descriptive variable names.
+- Use TypeScript types where applicable.
+- Do not duplicate locators or common actions.
+- Create reusable methods in Page Objects.
+- Keep test cases readable and business-focused.
+
+## Example
+
+When asked to automate a login flow:
+
+1. Identify stable locators.
+2. Create or update the LoginPage Page Object.
+3. Add the test under `tests/`.
+4. Add assertions for successful login.
+5. Avoid hard-coded waits.
+6. Run the test and troubleshoot failures.
+
+## When fixing failures
+
+Analyze:
+- Locator stability
+- Timing/waiting issues
+- Network/API dependencies
+- Authentication/session issues
+- Test data
+- Environment configuration
+
+Prefer fixing the root cause rather than adding arbitrary waits.
+
+## Important
+
+Before creating new code, inspect the existing project structure and reuse existing:
+- Page Objects
+- Fixtures
+- Utilities
+- Locators
+- Test data
+- Configuration
+
+Do not create duplicate implementations when an existing reusable component is available.
