@@ -36,6 +36,6 @@ test.only ('Check Login PageObject', async ({page}) => {
 await page.context().storageState({path : 'auth.json'});
 const login = new LoginPage(page);
 await login.Login('student','Password123');
-
+console.log("This is to check git changes");
 }
 )

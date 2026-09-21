@@ -8,7 +8,7 @@ test.only (' Demo API Test', async ({request}) => {
     const data = await response.json();
     const responsejson = await response.json();
     const secondHighestPriceProduct = data.products.sort((a, b) => b.price - a.price)[1];
-    //onsole.log(`The second highest price product is: ${secondHighestPriceProduct.title} with a price of ${secondHighestPriceProduct.price}`);
+    //console.log(`The second highest price product is: ${secondHighestPriceProduct.title} with a price of ${secondHighestPriceProduct.price}`);
     expect(data.products.length).toBeGreaterThan(0);
     expect(data.products[0]).toHaveProperty('title');
     expect (data.products[0]).toHaveProperty('price');
@@ -21,6 +21,7 @@ test.only (' Demo API Test', async ({request}) => {
     const totalprice = data.products.reduce((acc, product) => acc + product.price, 0);
     const everypriceexists = data.products.every(product => product.price > 0);
     expect (data).toEqual(responsejson);
+    console.log("This is for git changes");
     
 }
 )
