@@ -10,6 +10,7 @@ test (' Demo API Test', async ({request}) => {
     console.log(secondHighestPriceProduct);
     expect(data.products[0].tags[0]).toBe("beauty");
     expect(data.products[0].description).toMatch(/The Essence */);
+    console.log("This is to check git changes");
 }
 )
 
